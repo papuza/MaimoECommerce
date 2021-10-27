@@ -2,25 +2,27 @@ import styled from "styled-components";
 
 const Container = styled.div`
 
-position: absolute;
-bottom: 0;
+position: relative;
 width: 100vw;
-background-color: #000;
-color: #fff;
-
-  nav{
-    ul{
-        li{
-            padding: 0 20px;
-            list-style: none;
-
-            a{
-                text-decoration: none;
-                color: #fff;
-            }
-        }
+background-color: #eee;
+color: #1d1d1d;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+padding: 50px 0;
+font-family: 'Raleway', sans-serif;
+.footer-legal{
+    font-size: 12px;
+}
+.social-icons{
+    margin-top: 20px;
+    display: flex;
+    li{
+        padding: 5px;
     }
 }
+
 
 `
 

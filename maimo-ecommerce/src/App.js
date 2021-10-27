@@ -9,6 +9,7 @@ import Home from '../src/pages/Home'
 import Category from '../src/pages/Category'
 import Product from './pages/Product';
 import Navbar from './components/Navbar/Navbar';
+import 'bulma/css/bulma.min.css';
 
 function App() {
   return (

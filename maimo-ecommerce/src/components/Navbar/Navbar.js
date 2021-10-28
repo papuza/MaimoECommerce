@@ -13,7 +13,7 @@ const Navbar = () => {
                         <li><Link to={`/shop`}>Shop</Link></li>
                         <li><Link to={`/category/1`}>categ 1</Link></li>
                         <li><Link to={`/category/2`}>categ 2</Link></li>
-                        <li><Link to={`/product/2`}>Cart</Link></li>
+                        <li><Link to={`/product/2`}><img src="https://img.icons8.com/material-rounded/24/000000/shopping-cart.png"/></Link></li>
                     </ul>
                 </nav>
             </div>

@@ -1,11 +1,13 @@
-import React from 'react'
+import React, {useContext, useState } from 'react'
 import { Grid, Col } from '../Grid/index'
 import { Container } from './styled'
-import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Imagendefecto from '../../assets/imgs/taza.png'
+import { CartContext } from '../../Contexts/CartContext'
 
-const ProductContainer = () => {
+const ProductContainer = ({prodId}) => {
+
+    const {addToCart} = useContext(CartContext)
 
     return (
         <Container>
@@ -18,7 +20,7 @@ const ProductContainer = () => {
                                 <h1>Taza "And so it is"</h1>
                                 <h2>$439</h2>
                             </div>
-                            <Link to="#" className="buy-btn">Comprar</Link>
+                            <button className="buy-btn" onClick={() => addToCart(prodId)}>Add to cart</button>
                         </div>
                 </div>
                 <div className="product-description">

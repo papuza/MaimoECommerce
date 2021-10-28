@@ -51,7 +51,7 @@ font-family: 'Raleway', sans-serif;
             color: #000;
             background-color: #fff;
             border: none;
-            border-radius: 45px;
+            border-radius: 10px;
             box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease 0s;
             cursor: pointer;

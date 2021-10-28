@@ -27,7 +27,7 @@ const Container = styled.div`
             display: inline-block;
             padding: 10px 20px 10px 20px;
             background-color: #EEE;
-            border-radius: 5px;
+            border-radius: 10px;
             margin-top: 40px;
             a{
                 text-decoration:none;

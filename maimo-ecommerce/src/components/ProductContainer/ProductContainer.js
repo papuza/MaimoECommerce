@@ -1,46 +1,27 @@
-import React, {useContext, useState } from 'react'
-import { Grid, Col } from '../Grid/index'
+import React from 'react'
 import { Container } from './styled'
-import { Link } from 'react-router-dom'
-import Imagendefecto from '../../assets/imgs/taza.png'
-import { CartContext } from '../../Contexts/CartContext'
 
-const ProductContainer = ({prodId}) => {
-
-    const {addToCart} = useContext(CartContext)
+const ProductContainer = ({id, product, addToCart}) => {
 
     return (
         <Container>
             <div className="product-container">
                 <div className="product-intro">
-                        <img src={Imagendefecto} />
-                        <div className="product-info">
-                            <div className="product-head">
-                                <h3>Tazas personalizadas</h3>
-                                <h1>Taza "And so it is"</h1>
-                                <h2>$439</h2>
-                            </div>
-                            <button className="buy-btn" onClick={() => addToCart(prodId)}>Add to cart</button>
+                    <img src={product.image} />
+                    <div className="product-info">
+                        <div className="product-head">
+                            <h3>Producto</h3>
+                            <h1>{product.name}</h1>
+                            <h2>${product.price}</h2>
                         </div>
+                        <button className="buy-btn" onClick={() => addToCart({...product, quantity:1})}>Agregar al carrito</button>
+                    </div>
                 </div>
                 <div className="product-description">
                     <h2>Descripción</h2>
-                    <p className="desc-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In mattis, mauris ac pulvinar tempor, leo purus tempor nulla, non fermentum libero magna at urna. Fusce tristique turpis neque, ac aliquet nisl blandit malesuada. Interdum et malesuada fames ac ante ipsum primis in faucibus. In sodales ornare accumsan. </p>
-                    <h2>Información Técnica</h2>
-                    <div className="tec-box">
-                        <h3>Tamaño</h3>
-                        <p>100 x 20 cm</p>
-                    </div>
-                    <div className="tec-box tec-box-middle">
-                        <h3>Material</h3>
-                        <p>Cerámica</p>
-                    </div>
-                    <div className="tec-box">
-                        <h3>Color</h3>
-                        <p>Blanco</p>
-                    </div>
+                    <p className="desc-text">{product.description}</p>
                 </div>
-             
+
             </div>
         </Container>
     )

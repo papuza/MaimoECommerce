@@ -4,6 +4,8 @@ const Container = styled.div`
 
 background-color: #EEE;
 
+.logo{width: 20%}
+
 .navContainer{
     max-width: 1200px;
     height:100px;
@@ -23,6 +25,10 @@ background-color: #EEE;
                 list-style: none;
                 a{
                     color:#1D1D1D
+                }
+                a:hover{
+                    color: #2EE59D;
+                    font-weight: 700;
                 }
             }
         }

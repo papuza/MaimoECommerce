@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -8,14 +7,15 @@ import {
 import Home from '../src/pages/Home'
 import Category from '../src/pages/Category'
 import Product from './pages/Product';
-import Navbar from './components/Navbar/Navbar';
 import 'bulma/css/bulma.min.css';
 import { CartProvider } from './Contexts/CartContext';
+import Checkout from './pages/Checkout';
 
 function App() {
   return (
     <div className="App">
       <Router>
+        {/* Acá agrego el cartProvider y englobo toda la app. De esta manera puedo acceder al carrito desde cualquier lado de la app */}
         <CartProvider>
           <Switch>
             <Route exact path="/shop">
@@ -26,6 +26,9 @@ function App() {
             </Route>
             <Route exact path="/product/:id">
               <Product />
+            </Route>
+            <Route exact path={`/checkout`}>
+              <Checkout />
             </Route>
             <Route exact path="/">
               <Home />

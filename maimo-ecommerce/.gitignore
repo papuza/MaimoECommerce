@@ -12,7 +12,7 @@
 # production
 /build
 
-# misc
+# misc. acá agregamos el .env para decirle a git que no suba ese archivo. En git ignore van variables de entorno, secretas, que no deben ser publicas
 .DS_Store
 .env
 .env.local
